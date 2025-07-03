@@ -24,4 +24,6 @@ class RuanganSeeder extends Seeder
     ]);
 
     }
+
+    
 }

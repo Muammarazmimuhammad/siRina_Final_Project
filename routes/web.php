@@ -9,12 +9,18 @@ use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\RuanganController;
-use App\Http\Controllers\Admin\InventarisController;
+// use App\Http\Controllers\Admin\InventarisController;
+use App\Http\Controllers\admin\InventarisController; // Tambahkan ini di atas jika belum ada
 use App\Http\Controllers\User\PeminjamanInventarisController as UserPeminjamanInventarisController;
 use App\Http\Controllers\Admin\PeminjamanInventarisController as AdminPeminjamanInventarisController;
 use App\Http\Controllers\CekKetersediaanRuanganController;
+use App\Http\Controllers\HomeController;
+use App\Models\Inventaris;
+
 use App\Models\Ruangan;
 
+
+Route::get('/ruangan', [HomeController::class, 'ruangan'])->name('ruangan.index');
 
 
 // Route::get('/', [HomeController::class, 'index']);
@@ -45,6 +51,18 @@ Route::get('/audit', [RuanganController::class, 'showAuditorium'])->name('audit'
 Route::get('/auditorium', [RuanganController::class, 'showAuditorium'])->name('auditorium.show');
 Route::get('/a201', [RuanganController::class, 'showA201'])->name('a201');
 Route::get('/b201', [RuanganController::class, 'showB201'])->name('b201');
+Route::get('/inventaris/proyektor', [InventarisController::class, 'showProyektor'])->name('proyektor');
+
+
+
+Route::get('/', function () {
+    // Ambil 3 item inventaris favorit (contoh)
+    $inventarisFavorit = Inventaris::take(3)->get(); 
+    return view('welcome', compact('inventarisFavorit'));
+});
+// Route dinamis untuk menampilkan detail SEMUA item inventaris
+Route::get('/inventaris/{inventaris}', [InventarisController::class, 'show'])->name('inventaris.show');
+
 
 //home
 Route::get('/', function () {
@@ -108,7 +126,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
         'destroy' => 'admin.ruangan.destroy',
     ]);
 });
-
 
 // ✅ Redirect setelah login berdasarkan usertype
 Route::get('/redirect-after-login', function () {

@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Inventaris;
 use Illuminate\Http\Request;
+use App\Models\PeminjamanInventaris;
+
 
 class InventarisController extends Controller
 {
@@ -11,8 +14,20 @@ class InventarisController extends Controller
      */
     public function index()
     {
-        //
+        $inventaris = Inventaris::all();
+        return view('admin.inventaris.index', compact('inventaris'));
     }
+
+
+    public function showProyektor()
+    {
+        $inventaris = Inventaris::where('nama', 'LCD Projector')->first();
+        $jadwals = PeminjamanInventaris::where('inventaris_id', $inventaris->id ?? null)->latest()->get();
+        return view('proyektor', compact('inventaris', 'jadwals'));
+    }
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -63,8 +78,8 @@ class InventarisController extends Controller
     }
 
     public function status()
-{
-    $inventaris = Inventaris::all(); // Menggunakan model Inventaris
-    return view('inventaris.status', compact('inventaris'));
-}
+    {
+        $inventaris = Inventaris::all(); // Menggunakan model Inventaris
+        return view('inventaris.status', compact('inventaris'));
+    }
 }

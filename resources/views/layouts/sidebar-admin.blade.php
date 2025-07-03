@@ -21,6 +21,7 @@
           </a>
         </li>
 
+
         <li class="nav-item">
           <a href="{{ route('admin.peminjaman.index') }}" class="nav-link @if(Route::is('admin.peminjaman.*')) active @endif">
             <i class="nav-icon fas fa-calendar-check"></i>

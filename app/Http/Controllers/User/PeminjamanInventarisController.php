@@ -10,8 +10,17 @@ use App\Models\PeminjamanInventaris;
 use Carbon\Carbon;
 
 
+
 class PeminjamanInventarisController extends Controller
+
 {
+
+    public function inventaris()
+    {
+        return $this->belongsTo(Inventaris::class, 'inventaris_id');
+    }
+
+
     public function store(Request $request)
     {
         $request->validate([

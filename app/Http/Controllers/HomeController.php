@@ -14,4 +14,9 @@ class HomeController extends Controller
 
         return view('welcome', compact('gedung')); // ✅ kirim $gedung ke view
     }
+
+    public function ruangan()
+    {
+        return view('ruangan');
+    }
 }

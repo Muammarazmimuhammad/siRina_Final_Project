@@ -58,8 +58,7 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <div class="flex space-x-1">
                         <a href="/" class="text-white px-4 py-2 rounded-lg text-sm font-medium bg-blue-900 bg-opacity-30 hover:bg-opacity-50 transition">Home</a>
-                        <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Ruangan</a>
-                        <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Ruangan</a>
+                        <a href="{{ route('ruangan.index') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Ruangan</a> <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Ruangan</a>
                         <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Inventaris</a>
                         <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Inventaris</a>
                     </div>
@@ -187,73 +186,73 @@
     </div>
     </div>
 
-        <div class="container mx-auto px-4 sm:px-6 my-12 md:my-16">
-  <div class="bg-white rounded-2xl shadow-lg group transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.01]">
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center p-8 md:p-12">
-      
-      <div class="lg:col-span-3 animate__animated animate__fadeInLeft">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-          Platform Cerdas untuk Kebutuhan Kampus.
-        </h2>
-        <p class="text-gray-600 text-lg mb-8">
-          <strong>siRina</strong> adalah platform digital modern yang dirancang untuk merevolusi cara Anda memesan ruangan dan inventaris di STT-NF. Ucapkan selamat tinggal pada proses manual dan sambut efisiensi di ujung jari Anda.
-        </p>
-        
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-slate-50 hover:translate-x-1">
-            <svg class="h-7 w-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <div>
-              <h4 class="font-semibold text-gray-800">Pemesanan Real-Time</h4>
-              <p class="text-gray-500">Lihat jadwal dan langsung amankan ruangan atau inventaris tanpa menunggu konfirmasi manual.</p>
-            </div>
-          </li>
-          <li class="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-slate-50 hover:translate-x-1">
-            <svg class="h-7 w-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <div>
-              <h4 class="font-semibold text-gray-800">Manajemen Terpusat</h4>
-              <p class="text-gray-500">Semua fasilitas kampus, mulai dari auditorium hingga proyektor, tersedia dalam satu dasbor.</p>
-            </div>
-          </li>
-          <li class="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-slate-50 hover:translate-x-1">
-            <svg class="h-7 w-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <div>
-              <h4 class="font-semibold text-gray-800">Notifikasi Otomatis</h4>
-              <p class="text-gray-500">Dapatkan pengingat dan pembaruan status peminjaman Anda secara otomatis.</p>
-            </div>
-          </li>
-        </ul>
+    <div class="container mx-auto px-4 sm:px-6 my-12 md:my-16">
+        <div class="bg-white rounded-2xl shadow-lg group transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.01]">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center p-8 md:p-12">
 
-        <a href="{{ route('login') }}" class="inline-block bg-blue-600 text-white font-medium px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1">
-          Jelajahi Ruangan
-        </a>
-      </div>
+                <div class="lg:col-span-3 animate__animated animate__fadeInLeft">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                        Platform Cerdas untuk Kebutuhan Kampus.
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        <strong>siRina</strong> adalah platform digital modern yang dirancang untuk merevolusi cara Anda memesan ruangan dan inventaris di STT-NF. Ucapkan selamat tinggal pada proses manual dan sambut efisiensi di ujung jari Anda.
+                    </p>
 
-      <div class="lg:col-span-2 flex justify-center items-center animate__animated animate__fadeInRight animate__delay-1s">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto max-w-sm">
-          <path fill="#E0F2FE" d="M48,-65.4C63.2,-55.8,77.3,-41.8,82.4,-25.2C87.5,-8.6,83.6,10.6,75.4,26.2C67.2,41.8,54.7,53.8,40.7,62.3C26.7,70.8,11.2,75.8,-4.6,78.2C-20.4,80.5,-36.5,80.2,-49.6,73C-62.7,65.8,-72.8,51.8,-79.1,36.5C-85.4,21.2,-87.9,4.6,-84.6,-10.8C-81.3,-26.2,-72.2,-40.4,-60.1,-50.2C-48,-59.9,-32.9,-65.3,-18.2,-68.8C-3.6,-72.3,10.7,-74.9,25.8,-72.9C40.9,-70.9,48,-65.4,48,-65.4Z" transform="translate(100 100)"/>
-          <g transform="translate(50 50) scale(0.5)">
-            <path d="M62,3V27H33a3,3,0,0,0-3,3V57H6V3a3,3,0,0,1,3-3H59A3,3,0,0,1,62,3Z" style="fill:#3b82f6"/>
-            <path d="M91,6V54H65V6a3,3,0,0,1,3-3H88A3,3,0,0,1,91,6Z" style="fill:#60a5fa"/>
-            <rect x="30" y="57" width="35" height="40" rx="3" ry="3" style="fill:#93c5fd"/>
-            <path d="M82,87.5a2.5,2.5,0,0,1-2.5,2.5H68a2.5,2.5,0,0,1,0-5h11.5A2.5,2.5,0,0,1,82,87.5Z" style="fill:#eff6ff"/>
-            <path d="M82,77.5a2.5,2.5,0,0,1-2.5,2.5H68a2.5,2.5,0,0,1,0-5h11.5A2.5,2.5,0,0,1,82,77.5Z" style="fill:#eff6ff"/>
-            <path d="M50,87.5a2.5,2.5,0,0,1-2.5,2.5H35.5a2.5,2.5,0,0,1,0-5H47.5A2.5,2.5,0,0,1,50,87.5Z" style="fill:#eff6ff"/>
-            <path d="M50,77.5a2.5,2.5,0,0,1-2.5,2.5H35.5a2.5,2.5,0,0,1,0-5H47.5A2.5,2.5,0,0,1,50,77.5Z" style="fill:#eff6ff"/>
-            <circle cx="47.5" cy="15" r="5.5" style="fill:#eff6ff"/>
-            <circle cx="78" cy="18" r="5.5" style="fill:#eff6ff"/>
-            <path d="M84.5,26a1,1,0,0,1-.71-.29l-13-13a1,1,0,0,1,1.41-1.41l13,13A1,1,0,0,1,84.5,26Z" style="fill:#eff6ff"/>
-          </g>
-        </svg>
-      </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-slate-50 hover:translate-x-1">
+                            <svg class="h-7 w-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Pemesanan Real-Time</h4>
+                                <p class="text-gray-500">Lihat jadwal dan langsung amankan ruangan atau inventaris tanpa menunggu konfirmasi manual.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-slate-50 hover:translate-x-1">
+                            <svg class="h-7 w-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Manajemen Terpusat</h4>
+                                <p class="text-gray-500">Semua fasilitas kampus, mulai dari auditorium hingga proyektor, tersedia dalam satu dasbor.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-slate-50 hover:translate-x-1">
+                            <svg class="h-7 w-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Notifikasi Otomatis</h4>
+                                <p class="text-gray-500">Dapatkan pengingat dan pembaruan status peminjaman Anda secara otomatis.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('login') }}" class="inline-block bg-blue-600 text-white font-medium px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1">
+                        Jelajahi Ruangan
+                    </a>
+                </div>
+
+                <div class="lg:col-span-2 flex justify-center items-center animate__animated animate__fadeInRight animate__delay-1s">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto max-w-sm">
+                        <path fill="#E0F2FE" d="M48,-65.4C63.2,-55.8,77.3,-41.8,82.4,-25.2C87.5,-8.6,83.6,10.6,75.4,26.2C67.2,41.8,54.7,53.8,40.7,62.3C26.7,70.8,11.2,75.8,-4.6,78.2C-20.4,80.5,-36.5,80.2,-49.6,73C-62.7,65.8,-72.8,51.8,-79.1,36.5C-85.4,21.2,-87.9,4.6,-84.6,-10.8C-81.3,-26.2,-72.2,-40.4,-60.1,-50.2C-48,-59.9,-32.9,-65.3,-18.2,-68.8C-3.6,-72.3,10.7,-74.9,25.8,-72.9C40.9,-70.9,48,-65.4,48,-65.4Z" transform="translate(100 100)" />
+                        <g transform="translate(50 50) scale(0.5)">
+                            <path d="M62,3V27H33a3,3,0,0,0-3,3V57H6V3a3,3,0,0,1,3-3H59A3,3,0,0,1,62,3Z" style="fill:#3b82f6" />
+                            <path d="M91,6V54H65V6a3,3,0,0,1,3-3H88A3,3,0,0,1,91,6Z" style="fill:#60a5fa" />
+                            <rect x="30" y="57" width="35" height="40" rx="3" ry="3" style="fill:#93c5fd" />
+                            <path d="M82,87.5a2.5,2.5,0,0,1-2.5,2.5H68a2.5,2.5,0,0,1,0-5h11.5A2.5,2.5,0,0,1,82,87.5Z" style="fill:#eff6ff" />
+                            <path d="M82,77.5a2.5,2.5,0,0,1-2.5,2.5H68a2.5,2.5,0,0,1,0-5h11.5A2.5,2.5,0,0,1,82,77.5Z" style="fill:#eff6ff" />
+                            <path d="M50,87.5a2.5,2.5,0,0,1-2.5,2.5H35.5a2.5,2.5,0,0,1,0-5H47.5A2.5,2.5,0,0,1,50,87.5Z" style="fill:#eff6ff" />
+                            <path d="M50,77.5a2.5,2.5,0,0,1-2.5,2.5H35.5a2.5,2.5,0,0,1,0-5H47.5A2.5,2.5,0,0,1,50,77.5Z" style="fill:#eff6ff" />
+                            <circle cx="47.5" cy="15" r="5.5" style="fill:#eff6ff" />
+                            <circle cx="78" cy="18" r="5.5" style="fill:#eff6ff" />
+                            <path d="M84.5,26a1,1,0,0,1-.71-.29l-13-13a1,1,0,0,1,1.41-1.41l13,13A1,1,0,0,1,84.5,26Z" style="fill:#eff6ff" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
     <div class=" grid grid-cols-1 lg:grid-cols-12 gap-6 px-4 sm:px-6 ">
 
@@ -328,10 +327,13 @@
                             </div>
                         </div>
                         <div class="p-4 border-t">
-                            <a href="/inventaris/proyektor" class="block w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md transition text-center">
+                            <a href="{{ route('proyektor') }}" class="block w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md transition text-center">
                                 View Detail
                             </a>
+
                         </div>
+
+
                     </div>
 
                     <div class="border rounded-lg overflow-hidden hover:shadow-md transition-shadow flex flex-col">
@@ -388,13 +390,13 @@
                     </div>
 
                     <div class="mb-4">
-                        
+
                         <select name="gedung" class="w-full px-3 py-2 border rounded-md" required>
                             <option value="">-- Pilih Gedung --</option>
                             @foreach ($gedung as $g)
                             <option value="{{ $g }}">{{ $g }}</option>
                             @endforeach
-                            </select>
+                        </select>
 
                     </div>
 
@@ -408,7 +410,7 @@
                 <div class="relative top-20 mx-auto p-5 border w-3/4 shadow-lg rounded-md bg-white">
                     <div class="mt-3 text-center">
                         <div id="modalContent" class="mt-2 px-7 py-3">
-                            </div>
+                        </div>
                         <div class="items-center px-4 py-3">
                             <button id="closeModal" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 Tutup

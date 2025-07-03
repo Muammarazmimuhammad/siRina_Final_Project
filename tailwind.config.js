@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import colors from 'tailwindcss/colors'; // <-- 1. Impor warna
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +15,12 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            // 2. Tambahkan palet warna kustom di sini
+            colors: {
+                sky: colors.sky,
+                cyan: colors.cyan,
+                teal: colors.teal,
+            }
         },
     },
 

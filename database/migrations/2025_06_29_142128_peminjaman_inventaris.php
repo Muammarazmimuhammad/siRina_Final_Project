@@ -14,22 +14,24 @@ return new class extends Migration
         Schema::create('peminjaman_inventaris', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->bigInteger('peminjaman_id')->unsigned()->nullable()->comment('Terhubung ke peminjaman ruangan (jika ada)');
-            $table->bigInteger('user_id')->unsigned()->notNull();
-            $table->bigInteger('inventaris_id')->unsigned()->notNull();
-            $table->integer('jumlah')->notNull();
-            $table->date('tanggal_pinjam')->notNull();
-            $table->date('tanggal_kembali')->notNull();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('inventaris_id')->unsigned();
+            $table->integer('jumlah');
+            $table->date('tanggal_pinjam');
+            $table->date('tanggal_kembali');
             $table->enum('status', ['menunggu', 'disetujui', 'ditolak', 'selesai'])->default('menunggu');
             $table->enum('kondisi_kembali', ['baik', 'rusak_ringan', 'rusak_berat'])->nullable();
             $table->bigInteger('admin_id')->unsigned()->nullable();
             $table->timestamps();
-            
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('inventaris_id')->references('id')->on('inventaris');
-            $table->foreign('admin_id')->references('id')->on('users');
-            $table->foreign('peminjaman_id')->references('id')->on('peminjaman');
+
+            // Foreign keys with cascade delete
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('inventaris_id')->references('id')->on('inventaris')->onDelete('cascade');
+            $table->foreign('admin_id')->references('id')->on('users')->onDelete('set null'); // Admin boleh nullable
+            $table->foreign('peminjaman_id')->references('id')->on('peminjaman')->onDelete('cascade');
         });
     }
+
 
     /**
      * Reverse the migrations.

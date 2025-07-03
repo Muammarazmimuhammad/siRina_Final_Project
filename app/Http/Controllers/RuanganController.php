@@ -11,8 +11,12 @@ class RuanganController extends Controller
 {
     public function index()
     {
+        // Kode ini akan menampilkan file: resources/views/ruangan.blade.php
+        // return view('ruangan');
+
         $ruangans = Ruangan::all();
         return view('admin.ruangan.index', compact('ruangans'));
+        
     }
 
     public function create()
@@ -96,9 +100,9 @@ class RuanganController extends Controller
      */
         public function showA201()
 {
-    $ruangan = Ruangan::where('nama', 'Ruang A201')->first();
+    $ruangan = Ruangan::where('id', '=', 2)->first();
     $jadwals = Peminjaman::whereHas('ruangan', function ($query) {
-        $query->where('nama', 'Ruang A201');
+        $query->where('id', 2);
     })
     ->where('status', 'approved')
     ->orderBy('tanggal_pinjam', 'asc')
@@ -109,9 +113,9 @@ class RuanganController extends Controller
 
         public function showB201()
     {
-        $ruangan = Ruangan::where('nama', 'Ruang B201')->first();
+        $ruangan = Ruangan::where('id', '=', 3)->first();
         $jadwals = Peminjaman::whereHas('ruangan', function ($query) {
-            $query->where('nama', 'Ruang B201');
+            $query->where('id', ' 3');
         })
         ->where('status', 'approved')
         ->orderBy('tanggal_pinjam', 'asc')
