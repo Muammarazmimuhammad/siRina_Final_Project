@@ -88,6 +88,7 @@ Route::middleware(['auth', 'user'])->group(function () {
     // Form peminjaman inventaris
     Route::get('/user/peminjaman/inventaris', [UserPeminjamanInventarisController::class, 'create'])->name('user.peminjaman.inventaris');
     Route::post('/user/peminjaman/inventaris', [UserPeminjamanInventarisController::class, 'store'])->name('user.peminjaman.inventaris.store');
+    
 });
 
 // ✅ ADMIN ROUTES

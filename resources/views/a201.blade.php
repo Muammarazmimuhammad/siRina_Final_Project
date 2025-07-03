@@ -100,26 +100,22 @@
     <nav class="sticky top-0 z-50 bg-gradient-to-r from-blue-600 to-blue-800 shadow-lg">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo/Brand -->
                 <div class="flex-shrink-0 flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
+                    <img src="{{ asset('images/sirina_logo.png') }}" alt="SiRina Logo" class="h-12 w-13">
+
                     <span class="text-white font-bold text-2xl">siRina</span>
                     <span class="text-blue-200 text-sm hidden md:block">Room & Inventory Booking System</span>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-4">
                     <div class="flex space-x-1">
-                        <a href="#" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Home</a>
-                        <a href="#" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Ruangan</a>
-                        <a href="#" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Ruangan</a>
-                        <a href="#" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Inventaris</a>
-                        <a href="#" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Inventaris</a>
+                        <a href="/" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Home</a>
+                        <a href="{{ route('ruangan.index') }}" class="text-white bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition">Ruangan</a>
+                        <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Ruangan</a>
+                        <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Inventaris</a>
+                        <a href="{{ route('login') }}" class="text-blue-100 hover:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">Status Inventaris</a>
                     </div>
 
-                    <!-- Auth Buttons -->
                     <div class="ml-4 flex space-x-3">
                         <a href="{{ route('login') }}" class="text-blue-700 bg-white hover:bg-gray-100 px-5 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-sm flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -136,9 +132,8 @@
                     </div>
                 </div>
 
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button type="button" class="text-white hover:text-gray-200 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" class="text-white hover:text-gray-200 focus:outline-none">
                         <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -146,31 +141,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu (hidden by default) -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-                <a href="#" class="text-blue-100 hover:text-white block px-3 py-3 rounded-lg text-base font-medium hover:bg-blue-700 transition">Home</a>
-                <a href="#" class="text-blue-100 hover:text-white block px-3 py-3 rounded-lg text-base font-medium hover:bg-blue-700 transition">Ruangan</a>
-                <a href="#" class="text-blue-100 hover:text-white block px-3 py-3 rounded-lg text-base font-medium hover:bg-blue-700 transition">Status</a>
-                <a href="#" class="text-blue-100 hover:text-white block px-3 py-3 rounded-lg text-base font-medium hover:bg-blue-700 transition">Inventaris</a>
-                <div class="border-t border-blue-800 pt-3 mt-2 space-y-2">
-                    <a href="{{ route('login') }}" class="text-blue-700 bg-white hover:bg-gray-100  px-3 py-3 rounded-lg text-base font-medium text-center transition duration-300 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                        </svg>
-                        Login
-                    </a>
-                    <a href="{{ route('register') }}" class="text-white bg-blue-500 hover:bg-blue-400 block px-3 py-3 rounded-lg text-base font-medium text-center transition duration-300 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
-                        Register
-                    </a>
-                </div>
-            </div>
-        </div>
     </nav>
+
 
     <!-- Banner Section -->
     <div class="relative banner-height w-full overflow-hidden">
